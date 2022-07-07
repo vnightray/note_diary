@@ -1,0 +1,10 @@
+HPX_PORT=8117
+HPX_WEBPORT=8118
+HPX_TORRENTPORT=8116
+HPX_DATA="/home/kimihiro/hpx/datadir"
+HPX_CONTENT="/home/kimihiro/hpx/contentdir"
+RUN_IN_BACKGROUND=true
+AUTOSTART_ON_BOOT=always
+
+
+docker run -d -p $HPX_PORT:7007 -p $HPX_WEBPORT:7008 -v $HPX_CONTENT:/content -v $HPX_DATA:/data --name happypandax1 dezhao/happypandax:0.13.3 --restart $AUTOSTART_ON_BOOT

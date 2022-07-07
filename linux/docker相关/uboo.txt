@@ -1,0 +1,14 @@
+docker run -d \
+  --name=ubooquity \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=Asia/Shanghai \
+  -e MAXMEM=2048 \
+  -p 8112:2202 \
+  -p 8113:2203 \
+  -v /home/kimihiro/ubooquity/config:/config \
+  -v /home/kimihiro/ubooquity/books:/books \
+  -v /home/kimihiro/ubooquity/comics:/comics \
+  -v /home/kimihiro/ubooquity/files:/files \
+  --restart unless-stopped \
+  f9d4ae866929

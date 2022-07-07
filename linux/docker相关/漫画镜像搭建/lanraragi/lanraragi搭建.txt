@@ -1,0 +1,1 @@
+docker run --name=lanraragi -p 8124:3000 -v /root/lanraragi/content:/root/lanraragi/content -v /root/lanraragi/database:/root/lanraragi/database f9d950601ed4
